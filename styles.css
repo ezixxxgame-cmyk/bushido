@@ -565,11 +565,30 @@ a { color: inherit; text-underline-offset: 0.2em; }
 
   .hero {
     align-items: start;
-    padding-top: 112px;
-    background-size: auto 56%;
-    background-position: 92% 100%;
+    min-height: 0;
+    padding-block: 112px 72px;
+    background: var(--hero-sky);
   }
-  .hero::before { inset: 0; background: linear-gradient(var(--hero-sky) 44%, transparent 60%); }
+  .hero::before { display: none; }
+
+  .hero__lead {
+    position: relative;
+    color: var(--text);
+    text-shadow: 0 1px 2px var(--hero-sky), 0 0 14px var(--hero-sky);
+  }
+  .hero__lead::before {
+    --h: min(131vw, 560px);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -16px;
+    width: 100vw;
+    top: calc(50% - 0.648 * var(--h));
+    height: var(--h);
+    background: var(--hero) 95% 0 / auto 100% no-repeat;
+    mask: linear-gradient(transparent 50%, #000 62%, #000 84%, transparent);
+    pointer-events: none;
+  }
 
   .reviews__track { --cols: 1; grid-auto-columns: 86%; }
   .section-head--row { align-items: flex-start; flex-direction: column; }
