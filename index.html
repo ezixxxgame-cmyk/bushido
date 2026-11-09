@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bushido Auto — автомобили из Японии под ключ</title>
+  <meta name="description" content="Подбор автомобилей на аукционах Японии, проверка, доставка во Владивосток, растаможка и отправка в ваш город.">
+  <script>
+    try { var saved = localStorage.getItem('theme'); } catch (e) {}
+    document.documentElement.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&text=%E6%AD%A6%E5%A3%AB%E9%81%93&display=swap">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 28'%3E%3Ccircle cx='26' cy='14' r='12' fill='%232563EB'/%3E%3Cpath d='M2 11h36M8 17h30' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 40 28">
+      <circle cx="26" cy="14" r="12" fill="var(--accent)"/>
+      <path d="M14 11h24M14 17h24" stroke="var(--bg)" stroke-width="2"/>
+      <path d="M2 11h9M7 17h4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z" fill="currentColor" stroke="none"/></symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="logo" href="#top" aria-label="Bushido Auto — на главную">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__word">Bushido<small>Auto</small></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#route">Как мы работаем</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Сменить тему">
+          <svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--ghost btn--sm" href="#contact">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <h1 class="hero__title" id="hero-title">Автомобили <br>из <span>Японии</span></h1>
+        <p class="hero__lead">Подберём на аукционе, проверим, привезём и растаможим. Машина приезжает в ваш город — с документами и понятной ценой.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Оставить заявку <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--text" href="#route">Как это работает</a>
+        </div>
+      </div>
+      <p class="hero__kanji" lang="ja" aria-hidden="true">武士道</p>
+    </section>
+
+    <section class="section route" id="route" aria-labelledby="route-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="route-title">Путь <span>автомобиля</span></h2>
+          <p>От ставки на японском аукционе до ключей в ваших руках. На каждом этапе вы знаете, где машина и что с ней происходит.</p>
+        </div>
+        <ol class="route__list">
+          <li class="stop">
+            <h3>Заявка и бюджет</h3>
+            <p>Обсуждаем модель, год и комплектацию. Сразу считаем итоговую цену под ключ.</p>
+          </li>
+          <li class="stop">
+            <h3>Аукцион в Японии</h3>
+            <p>Ищем лоты, переводим аукционный лист, согласуем с вами и делаем ставку.</p>
+          </li>
+          <li class="stop">
+            <h3>Проверка и выкуп</h3>
+            <p>Осматриваем автомобиль, выкупаем и готовим к отправке в порт.</p>
+          </li>
+          <li class="stop">
+            <h3>Море до Владивостока</h3>
+            <p>Отправляем судном и держим вас в курсе статуса доставки.</p>
+          </li>
+          <li class="stop">
+            <h3>Растаможка и выдача</h3>
+            <p>Оформляем таможню, СБКТС и ЭПТС. Отправляем автовозом в ваш город.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Демо-отзывы: заменить на реальные -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <h2 id="reviews-title">Отзывы <span>клиентов</span></h2>
+            <p>Нам доверяют. И это — лучшее подтверждение качества.</p>
+          </div>
+          <div class="slider-nav">
+            <button class="icon-btn" type="button" data-dir="-1" aria-label="Предыдущие отзывы"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
+            <button class="icon-btn" type="button" data-dir="1" aria-label="Следующие отзывы"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+        <ul class="reviews__track" tabindex="0" aria-label="Отзывы клиентов">
+          <li class="review">
+            <div class="review__who">
+              <span class="review__avatar" aria-hidden="true">АП</span>
+              <p><b>Алексей П.</b><span>Toyota Harrier, 2021</span></p>
+            </div>
+            <blockquote>«Выбирали вместе по аукционному листу. Машина пришла ровно такой, как в описании, все документы на руках.»</blockquote>
+            <div class="stars" role="img" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          </li>
+          <li class="review">
+            <div class="review__who">
+              <span class="review__avatar" aria-hidden="true">ДК</span>
+              <p><b>Дмитрий К.</b><span>Honda Vezel Hybrid, 2020</span></p>
+            </div>
+            <blockquote>«Итоговую цену назвали сразу, и по дороге она не выросла. Держали в курсе на каждом этапе.»</blockquote>
+            <div class="stars" role="img" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          </li>
+          <li class="review">
+            <div class="review__who">
+              <span class="review__avatar" aria-hidden="true">ИС</span>
+              <p><b>Ирина С.</b><span>Toyota Alphard, 2019</span></p>
+            </div>
+            <blockquote>«Боялась покупать машину, не видя её вживую. Прислали фото и видео с осмотра — всё совпало.»</blockquote>
+            <div class="stars" role="img" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          </li>
+          <li class="review">
+            <div class="review__who">
+              <span class="review__avatar" aria-hidden="true">МИ</span>
+              <p><b>Максим И.</b><span>Subaru Forester, 2022</span></p>
+            </div>
+            <blockquote>«Второй автомобиль через Bushido. Быстро, честно и без лишних звонков.»</blockquote>
+            <div class="stars" role="img" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <div class="section-head">
+            <h2 id="contact-title">Подберём авто <span>под ваш бюджет</span></h2>
+            <p>Оставьте заявку — менеджер перезвонит, уточнит пожелания и пришлёт подборку с аукционов.</p>
+          </div>
+          <ul class="contact__links">
+            <li><a href="tel:+70000000000"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>+7 (000) 000-00-00</a></li>
+            <li><a href="#"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Telegram</a></li>
+            <li><a href="#"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <label class="field">
+            <span>Имя</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7" required>
+          </label>
+          <label class="field">
+            <span>Какой автомобиль ищете</span>
+            <input type="text" name="car" placeholder="Например, Toyota Harrier">
+          </label>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <button class="btn btn--primary btn--wide" type="submit">Отправить заявку <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form__status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <a class="logo" href="#top" aria-label="Bushido Auto — наверх">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__word">Bushido<small>Auto</small></span>
+      </a>
+      <p>© 2026 Bushido Auto. Автомобили из Японии под ключ.</p>
+      <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+    </div>
+  </footer>
+</body>
+</html>
